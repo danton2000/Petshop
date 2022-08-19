@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop | Home</title>
+</head>
+<body>
+    <h1>Pet Shop Cia do Animal</h1>
+    <p>Compre seus produtos, pelo melhor preço </p>
+
+    <h3><a href="/produtos">Produtos</a> em Destaques</h3>
+    <ul>
+        
+        {% for produto in produtos %}
+            {% if produto['destaque'] == '1' %}
+            <li>
+                <a href="/produtos/{{produto['url_link']}}/detalhes">{{produto['nome_produto']}}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h3><a href="/servicos">Servicos</a> em Destaques </h3>
+    <ul>
+        
+        {% for servico in servicos %}
+            {% if servico['destaque'] == '1' %}
+            <li>
+                <a href="/servicos/{{servico['url_link']}}/detalhes">{{servico['nome_servico']}}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <!-- {{produtos}} -->
+
+
+
+</body>
+</html>
