@@ -1,0 +1,28 @@
+Instalar o venv:
+python -m venv venv
+
+Instalando o flask no venv:
+pip install flask
+
+Iniciar o ambiante virutal:
+.\venv\Scripts\activate.bat
+
+mostrar os pacotes
+pip freeze
+
+ajuda sobre o pip:
+pip --help
+
+#setando uma variavel?
+set FLASK_APP=arquivo
+
+deixar o servidor atualizar a cada atualização(modo debug)
+flask --app hello --debug run
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+flask --app index run
+
+#salvado as versões dos pacotes utilizados no projeto
+pip freeze > requeriments.txt
